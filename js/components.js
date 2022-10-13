@@ -16,7 +16,7 @@ window.onload=function(){
         '        <!--下载app-->\n' +
         '        <div class="app_dow">\n' +
         '\n' +
-        '            <a href="http://cliclitv.cn/app_download.html">\n' +
+        '            <a href="https://apersonxx.github.io/app_download.html">\n' +
         '                <span id="down_app">下载app</span>\n' +
         '            </a>\n' +
         '        </div>\n' +
