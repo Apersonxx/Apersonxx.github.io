@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="title">
+    <button @click="addList()">添加</button>
+    <ol>
+        <li v-for="(item,key) in list" >
+            <img src="https://cliclitv.cn/img/tianqi.png" alt="头像" style="width: 70px;height: 50px;">
+            {{msg + item}}
+            <button @click="removeData(key)">删除</button>
+        </li>
+    </ol>
+</div>
+</body>
+</html>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            msg:'游客：',
+            list:[],
+            title:'',
+        },
+        methods:{
+            addList () {
+                if(this.title ==''){
+                    alert('请输入您的留言')
+                }else {
+                    this.list.push(this.title);
+                    this.title='';
+                }
+                localStorage.setItem('list',JSON.stringify(this.list));
+
+            },
+            removeData(key){
+                this.list.splice(key,1);
+                localStorage.setItem('list',JSON.stringify(this.list));
+
+            }
+        },
+        mounted() {
+            var dataList = JSON.parse(localStorage.getItem('list'));
+            if(dataList){
+                this.list=dataList;
+            }
+        }
+    })
+</script>

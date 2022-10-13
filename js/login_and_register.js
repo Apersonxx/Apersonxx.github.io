@@ -1,0 +1,1 @@
+function register(){$(".loginer").css("display","none");$(".register").css("display","block")}function loginer(){$(".register").css("display","none");$(".loginer").css("display","block")};

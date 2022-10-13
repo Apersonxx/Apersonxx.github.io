@@ -1,0 +1,118 @@
+.bg_color{
+    position: relative;
+}
+.v-wrap{
+    margin-left: 5%;
+    height: 100%;
+    width: 90%;
+}
+.v_title>span{
+    color: #ccc;
+}
+.v_left{
+    width: 60%;
+    float: left;
+    height: 100%;
+}
+.v_video{
+    width: 100%;
+    margin-top: 20px;
+    height: 100%;
+}
+
+/*右侧推荐*/
+.v_right{
+    width: 38%;
+    float: left;
+    height: 100%;
+    margin-left: 2%;
+}
+.header_img{
+    width: 100%;
+    height: 100px;
+    margin: 20px 0 20px 0;
+    box-shadow: 7px 7px 5px #888888;
+    border: 1px solid #000;
+
+}
+.left_img{
+    width: 35%;
+    height: 100%;
+    float: left;
+    margin: 0 5% 0 0;
+}
+.left_img>a>img{
+    width: 100%;
+    height: 100%;
+}
+.header_img>a{
+    text-decoration: none;
+    line-height: 70px;
+}
+.video-count{
+    color: #ccc;
+}
+.app{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e7e7e7;
+
+}
+.app>ol{
+    width: 100%;
+    height: 100%;
+}
+.app>ol>li{
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    margin: .5em auto;
+    display: flex;
+}
+.d_left{
+    width: 20%;
+    height: 10rem;
+    line-height: 10rem;
+    text-align: center;
+}
+.d_left>img {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+.d_right{
+    width: 75%;
+    height: 100%;
+    position: relative;
+    margin: 1%;
+}
+.d_right>a{
+    text-decoration: none;
+    color: pink;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.d_right>button{
+    margin-top: 3rem;
+    position: absolute;
+    right: 0;
+}
+.d_right>span{
+    float: right;
+}
+.d_right>p{
+    margin-top: 1rem;
+    width: 85%;
+}
+
+textarea{
+    resize:none;
+}
+textarea.form-control{
+    height: 6em;
+
+}
+.comment{
+    width: 100%;
+    height: 10em;
+}

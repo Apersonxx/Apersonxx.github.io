@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta name="description" content="cnicni视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
+    <meta name="keywords"
+          content="Cnicni,Cnicnitv,C哩C哩,C哩C哩动画,C哩C哩弹幕网,弹幕视频,C站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,二次元,游戏视频,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid,日本动漫,国产动漫,手机游戏,网络游戏,电子竞技,ACG燃曲,ACG神曲,追新番,新番动漫,新番吐槽,巡音,镜音双子,千本樱,初音MIKU,舞蹈MMD,MIKUMIKUDANCE,洛天依原创曲,洛天依翻唱曲,洛天依投食歌,洛天依MMD,vocaloid家族,OST,BGM,动漫歌曲,日本动漫音乐,宫崎骏动漫音乐,动漫音乐推荐,燃系mad,治愈系mad,MAD MOVIE,MAD高燃">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="spm_prefix" content="333.851">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="js/search.js"></script>
+
+    <script src="js/jQuery/jQuery.js"></script>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+
+</head>
+<body>
+<!--<script>-->
+    <!--(function () {-->
+        <!--$('.btn-default').click(function () {-->
+            <!--$.ajax({-->
+                <!--type: "post",-->
+                <!--contentType: "application/json;charset=UTF-8",-->
+                <!--url: 'lr?action=log',-->
+                <!--data : "username="+$('#inputEmail3').val()+"&password=" + $('#inputPassword3').val(),-->
+                <!--success :function (result) {-->
+                    <!--if(result){-->
+                        <!--alert("注册成功");-->
+                        <!--location="index.html"-->
+                    <!--}-->
+                <!--},-->
+                <!--error : function (e) {-->
+                    <!--if(e){-->
+                        <!--alert("注册成功");-->
+
+                    <!--}-->
+                    <!--console.log(e);-->
+                <!--}-->
+            <!--})-->
+        <!--})-->
+    <!--})();-->
+<!--</script>-->
+
+<!--头部-->
+<div class="header">
+    <img src="https://tva1.sinaimg.cn/large/007X8olVly1g7hmb4jp4mj31kw07n7d8.jpg" class="img_h1"/>
+    <img src="https://cliclitv.cn/img/logo_cnicni.png" class="logo_cnicni"/>
+    <div class="bg_color">
+        <div class="searcher">
+            <a href="https://cliclitv.cn/">
+                <div class='logo_img'>
+                    <img src="https://cliclitv.cn/img/logo-1.png">
+                </div>
+                <span class="master_station">主站</span>
+            </a>
+            <a style="margin-left: 20%" href="https://cliclitv.cn/app/money.html">
+                <span class="master_station">赚钱花</span>
+            </a>
+        </div>
+        <!--下载app-->
+        <div class="app_dow">
+
+            <a href="http://cliclitv.cn/app_download.html">
+                <span id="down_app">下载app</span>
+            </a>
+        </div>
+
+        <div class="down_app" id="dowl">
+
+            <img src="https://cliclitv.cn/img/app.png">
+            <p>扫描下载</p>
+            <p>手机客户端</p>
+        </div>
+        <!--导航-->
+        <ul>
+            <li><a href="https://cliclitv.cn/">首页</a></li>
+            <li><a href="https://cliclitv.cn/login.html">
+                <!--<img src="img/login.jpg" style="width: 30%;border-radius:50%;height:100%; margin-right: 2%;margin-top: -3%;border: 1px solid silver;">-->
+                登录/注册</a></li>
+            <li class="on"><a href="https://cliclitv.cn/up.html" class="a_push"
+                              style="color: #fff;background-color: red;">投稿</a></li>
+        </ul>
+        <!--搜索-->
+        <div class="search_stl">
+            <div class="input-group">
+                <input type="text" placeholder=" 功能暂未开放" disabled class="form-control" id="search">
+                <span class="input-group-addon search_btn" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+            </div>
+            <ul id="list">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--内容-->
+<div style="background-color: #000;background-image: url(https://cliclitv.cn/img/login_bg3.jpg);background-size: cover;z-index: 1;overflow: hidden;width: 100%;height: 101%;top: 0;left: 0;position: fixed!important;">
+    <!--登录-->
+    <div class="loginer" style="position: fixed;top: 20%;left: 30%;width: 40%;height: 30em;background-color: #000;opacity: .8;border-radius: 10px;color: white;">
+        <h1 style="text-align: center;padding: .5em 0 1em 0">登录</h1>
+        <form class="form-horizontal" method="post">
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">邮箱</label>
+                <div class="col-sm-6">
+                    <input type="email" name="username" class="form-control" id="inputEmail3" placeholder="请输入注册的邮箱"  autocomplete="off"><span></span>
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-3"><img src="img/pt1.png" alt="错误"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">密码</label>
+                <div class="col-sm-6">
+                    <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-3"><img src="img/pt1.png" alt="错误"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="authCode" class="col-sm-3 control-label">验证码</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control photokey" id="authCode" placeholder="请输入验证码">
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-5"><span  class="btn btn-warning authCode" style="font-size: 18px;"></span></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked>记住我 <span style="color: #ccc">不是自己电脑不要勾选哦~</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-12">
+                    <button type="submit" class="btn btn-default">确认登录</button>
+                    <div onclick="register()" class="btn btn-info col-sm-offset-2" role="button">点击去注册</div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--注册-->
+    <div class="register" style="position: fixed;display: none;top: 20%;left: 30%;width: 40%;height: 30em;background-color: #000;opacity: .8;border-radius: 10px;color: white;">
+        <h1 style="text-align: center;padding: .5em 0 1em 0">注册</h1>
+        <form method="post" class="form-horizontal">
+
+            <div class="form-group">
+                <label for="inputEmail2" class="col-sm-3 control-label">邮箱</label>
+                <div class="col-sm-6">
+                    <input type="email" name="username" class="form-control" id="inputEmail2" placeholder="请输入邮箱注册"  autocomplete="off">
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-3"><img src="img/pt1.png" alt=""></div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1" class="col-sm-3 control-label">密码</label>
+                <div class="col-sm-6">
+                    <input type="password" name="password" class="form-control" id="inputPassword1" placeholder="请输入密码">
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-3"><img src="img/pt1.png" alt=""></div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword2" class="col-sm-3 control-label">确认密码</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="请再次输入密码">
+                    <span class="error"></span>
+                </div>
+                <div class="col-sm-3"><img src="img/pt1.png" alt=""></div>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<div class="col-sm-offset-3 col-sm-12">-->
+                    <!--<div class="checkbox">-->
+                        <!--<label>-->
+                            <!--<input type="checkbox">记住我 <span style="color: #ccc">不是自己电脑不要勾选哦~</span>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-12">
+                    <button type="submit"  class="btn btn-default " onclick="">确认注册</button>
+                    <div onclick="loginer()" class="btn btn-info col-sm-offset-2" role="button">点击去登录</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/login_and_register.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script src="js/component.js"></script>
+
+<script src="video/js/components.js"></script>

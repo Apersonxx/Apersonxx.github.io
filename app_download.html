@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>app下载</title>
+    <meta name="description" content="cnicni视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。">
+    <meta name="keywords"
+          content="Cnicni,Cnicnitv,C哩C哩,C哩C哩动画,C哩C哩弹幕网,弹幕视频,C站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,二次元,游戏视频,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid,日本动漫,国产动漫,手机游戏,网络游戏,电子竞技,ACG燃曲,ACG神曲,追新番,新番动漫,新番吐槽,巡音,镜音双子,千本樱,初音MIKU,舞蹈MMD,MIKUMIKUDANCE,洛天依原创曲,洛天依翻唱曲,洛天依投食歌,洛天依MMD,vocaloid家族,OST,BGM,动漫歌曲,日本动漫音乐,宫崎骏动漫音乐,动漫音乐推荐,燃系mad,治愈系mad,MAD MOVIE,MAD高燃">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="spm_prefix" content="333.851">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="js/jQuery/jQuery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" href="css/app_download.css">
+    <script src="js/search.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            height: 55px;
+        }
+        .wrap{
+            width: 100%;
+            height: 41em;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrap>ul{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .wrap>ul>li{
+            float: left;
+            height: 100%;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="bg_color">
+        <div class="searcher">
+            <a href="https://cliclitv.cn/">
+                <div class='logo_img'>
+                    <img src="https://cliclitv.cn/img/logo-1.png">
+                </div>
+                <span class="master_station">主站</span>
+            </a>
+            <a style="margin-left: 20%" href="https://cliclitv.cn/app/money.html">
+                <span class="master_station">赚钱花</span>
+            </a>
+        </div>
+        <!--下载app-->
+        <div class="app_dow">
+            <a href="http://cliclitv.cn/app_download.html">
+                <span id="down_app">下载app</span>
+            </a>
+        </div>
+
+        <div class="down_app" id="dowl">
+            <img src="https://cliclitv.cn/img/app.png">
+            <p>扫描下载</p>
+            <p>手机客户端</p>
+        </div>
+        <!--导航-->
+        <ul>
+            <li><a href="https://cliclitv.cn/">首页</a></li>
+            <li><a href="https://cliclitv.cn/login.html">
+                <!--<img src="img/login.jpg" style="width: 30%;border-radius:50%;height:100%; margin-right: 2%;margin-top: -3%;border: 1px solid silver;">-->
+                登录/注册</a></li>
+            <li class="on"><a href="https://cliclitv.cn/up.html" class="a_push"
+                              style="color: #fff;background-color: red;">投稿</a></li>
+        </ul>
+        <!--搜索-->
+        <div class="search_stl">
+            <div class="input-group">
+                <input type="text" placeholder=" 功能暂未开放" disabled class="form-control" id="search">
+                <span class="input-group-addon search_btn" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+            </div>
+            <ul id="list">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <ul>
+        <li><img src="img/bg1.png" alt="" style="width:100%;height: 100%;"></li>
+        <li><img src="img/bg2.png" alt="" style="width:100%;height: 100%;"></li>
+        <li><img src="img/bg1.png" alt="" style="width:100%;height: 100%;"></li>
+        <li><img src="img/bg2.png" alt="" style="width:100%;height: 100%;"></li>
+    </ul>
+</div>
+<div class="contenter">
+    <div class="phone_img">
+        <img src="https://cliclitv.cn/img/download.jpg" style="width: 59%;height: 72%;margin-top: 25%;border-radius: 25px">
+        <img src="https://cliclitv.cn/img/phone.png" style="position: relative;width: 67%;height: 75%;top: -73%;">
+    </div>
+    <div class="right_dow">
+        <div style="margin-top: 15%;width: 100%;height: 30%;">
+            <img src="https://cliclitv.cn/img/app_title.png" style="float: left;margin-top: 10%;"></div>
+        <div style="float: left;width: 20%;box-shadow: 5px 5px 5px #888888;">
+            <img src="https://cliclitv.cn/img/app.png" style="width: 100%;"></div>
+        <div class="down_btn">
+            <div><img src="https://cliclitv.cn/img/ios.png"><span>iPhone下载</span></div>
+            <div><img src="https://cliclitv.cn/img/android.png"><span>Android下载</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/app_dld.js"></script>
+<script src="js/component.js"></script>
+<script src="video/js/components.js"></script>

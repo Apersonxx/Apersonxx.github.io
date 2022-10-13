@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>关于</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="spm_prefix" content="333.851">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="js/jQuery/jQuery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<div class="header">
+    <div class="bg_color">
+        <div style="width: 20%; height: 100%;float: left">
+            <a href="https://cliclitv.cn/">
+                <div class='logo_img'>
+                    <img src="img/logo-1.png" style="width: 100%;height: 100%">
+                </div>
+                <span class="master_station" style="height: 55px;line-height: 55px;cursor: pointer;">主站</span>
+            </a>
+        </div>
+        <div class="app_dow">
+            <a href="app_download.html">
+                <span id="down_app">下载app</span>
+            </a>
+        </div>
+        <div class="down_app" id="dowl">
+
+            <img src="img/app.png">
+            <p style="color: #212121;">
+                扫描下载手机客户端
+            </p>
+        </div>
+        <ul>
+            <li>
+                <a href="https://cliclitv.cn/">首页</a>
+            </li>
+            <li class="cli_duty btn" style="color: white;display: block;" onclick="duty()">资源申明</li>
+            <li class="cli_about btn" style="color: white;display: none;" onclick="about()">关于我们</li>
+        </ul>
+    </div>
+    <div class="bgd">
+        <div class="about">
+            <h1>cnicni弹幕网</h1>
+            <h4>about</h4>
+            <h5>站内设有动画、音乐、游戏、娱乐、影视、科学、番组等多个栏目</h5>
+            <h5>合作与广告投放请联系邮箱：</h5>
+            <h5>
+                <a>1195187469@qq.com</a>
+            </h5>
+        </div>
+        <div class="duty">
+            <h1>资源说明</h1>
+            <h4>Not my pot！</h4>
+            <h5 class="duty_title">
+            本站视频内容均链接到互联网各大视频站点，本小站自身不存储、控制、编辑或修改第三方视频画面及内容。</h5>
+            <h5 class="duty_title" style="padding-bottom: 1rem;">
+            如果您对本站所载视频作品版权的归属存有异议，请立即通知我，我将在第一时间予以删除，同时向你表示歉意！</h5>
+            <h5 style="width: 100%;line-height: 4rem;">
+                <a href="tencent://message/?uin=2676156626&Site=cnicnitv.cn&Menu=yes">点击联系QQ: 2676156626</a>
+            </h5>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>function duty() {
+    $('.about').css('display', 'none');
+    $('.duty').css('display', 'block');
+    $('.cli_about').css({'display': 'block'});
+    $('.cli_duty').css({'display': 'none'});
+}
+
+function about() {
+    $('.about').css('display', 'block');
+    $('.duty').css('display', 'none');
+    $('.cli_about').css({'display': 'none'});
+    $('.cli_duty').css({'display': 'block'});
+}</script>
+<script src="js/component.js"></script>

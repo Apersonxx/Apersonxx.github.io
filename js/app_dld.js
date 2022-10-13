@@ -1,0 +1,1 @@
+$(function(){var b=$(".wrap>ul");var c=b.html();b.html(c+c);var h=$(".wrap>ul>li");var a=h.eq(0).width();var g=h.size();var d=a*g;b.width(d);var f=2;function e(){if(f>0){if(b.css("left")==-d/2+"px"){b.css("left",0)}b.css("left","+=-2px")}if(f<0){if(b.css("left")=="0px"){b.css("left",-d/2+"px")}b.css("left","+="+f+"px")}}timeId=setInterval(e,20)});
