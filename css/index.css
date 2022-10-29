@@ -253,3 +253,22 @@ li {
 .footer_about > p > a:hover {
     color: white
 }
+
+/*news*/
+.allTile{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+
+}
+.allTile>li{
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+
+}
+.allTile>li img{
+    width: 25px;
+    height: 25px;
+}
