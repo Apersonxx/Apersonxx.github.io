@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记录薄</title>
+    <script crossorigin="anonymous" integrity="sha512-hoTix1si+IJBFts8sRzr295E59yv7oz1HRUzFCm0xuqerwKVjlXkvKEO+KxcI+8H10bVMI2gEfuntmxtCYHVPQ==" src="https://lib.baomitu.com/vue/2.7.2/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+        ::-webkit-scrollbar{
+            display:none
+        }
+        .apps{
+            /*width: 100%;*/
+            /*background: url("https://www.insti.com/wp-content/uploads/2021/12/Trans-Pride.jpg")no-repeat;*/
+            /*background-size: 100% 100%;*/
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			opacity: .9;
+			background: white;
+        }
+        .clists{
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height: 25px;
+            line-height: 25px;
+            border-bottom: 1px solid lightpink;
+        }
+        .clists>span{
+            font-size: 14px;
+            color: pink;
+            font-weight: bolder;
+            text-align: center;
+            z-index: 9;
+        }
+        .imgs:after{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: .2;
+            content: '';
+            /*background: #000;*/
+            z-index: 2;
+        }
+
+        .imgs:before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: .4;
+            content: '';
+            /*background: url('https://www.insti.com/wp-content/uploads/2021/12/Trans-Pride.jpg')no-repeat;*/
+            background-size: 100% 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="apps">
+	
+	<div style='width: 414px;height: 896px;margin: 100px auto;position: relative;'>
+		<img src="img/phone.png" alt="phone" style="width: 414px;height: 896px;">
+		
+		<div style="width: 100%;height: 100%;position: absolute;top: 0;">
+			<div style="position: absolute;top: 20px;left: 20px"><a style="color: pink" href="index.html">首页</a></div>
+			<div>
+			    <div style="display: flex;justify-content: space-around">
+			        <el-input style="width: 30%;" v-model="input0" placeholder="请输入内容1" size="mini"></el-input>
+			        <el-input style="width: 30%;" v-model="input2" placeholder="请输入内容2" size="mini"></el-input>
+			        <el-input style="width: 30%;" v-model="value1" placeholder="时间" size="mini"></el-input>
+			    </div>
+			    <div style="width: 100%;display: flex;justify-content: space-around;margin-top: 30px">
+			        <el-button type="primary" @click="btnClick" size="mini">确定</el-button>
+			        <el-button type="primary" @click="btnRemove" size="mini">清空所有数据</el-button>
+			    </div>
+			</div>
+			
+			<div style="position: relative;width: 95%;height: 60%;bottom: 5%;box-shadow: 1px 3px 10px #ccc">
+			    <div style="position: relative;width: 100%;height: 100%;">
+			        <h3 style="text-align: center;color: #69e7e8">记录</h3>
+			        <div style="position: relative;width: 100%;height: 87%;bottom: 10px;overflow-y: auto" class="imgs">
+			            <div v-for="(item,index) in list" :key="index" class="clists">
+			                <span style="width: 10%;">{{item.tags}}次</span>
+			                <span style="width: 24%;">{{item.title}}</span>
+			                <span style="width: 24%;">{{item.msg}}</span>
+			                <span >{{item.time}}</span>
+			            </div>
+			        </div>
+			
+			    </div>
+			</div>
+		</div>
+		
+	</div>
+    
+
+</div>
+</body>
+</html>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data() {
+            return {
+                name:'晓晓',
+                input0: '泰补2mg',
+                input2: '土色25mg',
+                value1:'',
+                list:[],
+                tag:1
+            }
+        },
+        mounted(){
+
+
+
+            this.value1= this.GetDateStr();
+
+            let inputs = JSON.parse(window.localStorage.getItem('inputs'));
+            let input2 = JSON.parse(window.localStorage.getItem('input2'));
+
+            if(inputs != null){
+                this.input0 = inputs
+            }
+            if(input2 != null){
+                this.input2 = input2
+            }
+
+
+            let datas = JSON.parse(window.localStorage.getItem('datas'));
+            let names = JSON.parse(window.localStorage.getItem('names'));
+            let tags = JSON.parse(window.localStorage.getItem('tags'));
+            if(datas != null){
+                this.list = datas
+            }
+            if(tags != null){
+                this.tag = tags
+            }
+
+        },
+        methods:{
+            btnRemove(){
+                window.localStorage.removeItem('datas');
+                window.localStorage.removeItem('tags');
+                this.list = [];
+                this.tag = 1;
+            },
+            btnClick(){
+                this.list.unshift(
+                    {title:this.input0,msg:this.input2,time:this.value1,tags:this.tag++}
+                );
+                window.localStorage.setItem('datas',JSON.stringify(this.list));
+                window.localStorage.setItem('tags',JSON.stringify(this.tag));
+                window.localStorage.setItem('inputs',JSON.stringify(this.input0));
+                window.localStorage.setItem('input2',JSON.stringify(this.input2));
+            },
+            btnClick2(){
+                window.localStorage.setItem('names',JSON.stringify(this.name))
+            },
+            GetDateStr() {
+                //获取当前时间并打印
+                let yy = new Date().getFullYear();
+                let mm = new Date().getMonth()+1;
+                let dd = new Date().getDate();
+                let hh = new Date().getHours();
+                let mf = new Date().getMinutes()<10 ? '0'+new Date().getMinutes() : new Date().getMinutes();
+                let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();
+                return `${yy}-${mm}-${dd} ${hh}:${mf}:${ss}`;
+            },
+        }
+    })
+</script>
