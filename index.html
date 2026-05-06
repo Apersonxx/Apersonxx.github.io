@@ -551,9 +551,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </body>
 
@@ -626,7 +623,7 @@
                 bfs: 7,
                 bfe: 11,
                 // 下午时间
-                afts: 13,
+                afts: 16,
                 afte: 20,
                 // 当月工作日总数
                 allNubs: 0,
@@ -641,14 +638,16 @@
             let hdd = JSON.parse(localStorage.getItem('dd'));
             let aaa = JSON.parse(localStorage.getItem('lists'));
 
-            // 初始赋值
-            let lcs = JSON.parse(localStorage.getItem('lcsdbtn1'));
-            this.dbtn1 = lcs;
             this.bfNb = 0;
             this.afNb = 0;
 
             // 如果有数据赋上
             if (aaa != null) {
+                // 初始赋值
+                let lcs = JSON.parse(localStorage.getItem('lcsdbtn1'));
+                this.dbtn1 = lcs;
+                console.log('creat', hour);
+                console.log('creat', aaa);
                 for (let i = 0; i < aaa.length; i++) {
                     if (aaa[i].yy == year && aaa[i].mm == month) {
                         this.bfNb += aaa[i].amd;
@@ -689,8 +688,12 @@
                         this.dbtn1 = false;
                     }
                 }
-            } else {
+            } else if (hour >= this.afts && hour < this.afte) {
+                console.log('打卡时间开启1')
                 // 打卡时间开启
+                this.dbtn1 = false;
+            } else if (hour >= this.bfs && hour < this.bfe) {
+                console.log('打卡时间开启2')
                 this.dbtn1 = false;
             };
 
@@ -722,8 +725,6 @@
                 return count;
             }
             this.allNubs = calculateWeekdays(startDate, endDate);
-
-
 
         },
         mounted() {
@@ -855,6 +856,8 @@
                 let lists2 = this.dataList;
                 let nowtime = JSON.parse(localStorage.getItem('tiemDate'));
                 hour = JSON.parse(localStorage.getItem('ddHour'));
+                console.log(hour)
+
                 if (lists2.length > 0) {
                     let qg = this.dataList[0].message.split(' ');
 
